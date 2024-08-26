@@ -1,0 +1,39 @@
+.navbar{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 10px 60px;
+    box-shadow: 0px 1px 3px -2px #000;
+    position: fixed;
+    width: 93%;
+    margin-bottom: 1px;
+    background: #fff;
+    z-index: 100;
+}
+.nav-logo{
+    width: 170px;
+    cursor: pointer;
+}
+.nav-profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    object-fit:cover;
+    cursor: pointer;
+}
+@media (max-width:800px) {
+    .navbar{
+        padding: 15px 30px;
+    }
+}
+@media (max-width:500px) {
+    .navbar{
+        padding: 10px 20px;
+    }
+    .nav-logo{
+        width: 130px;
+    }
+    .nav-profile{
+        width: 40px;
+    }
+}
