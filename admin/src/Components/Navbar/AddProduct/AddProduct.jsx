@@ -30,7 +30,7 @@ const AddProduct = () => {
     let formData = new FormData();
     formData.append('product',image);
 
-    await fetch('https://shopper-backend-tan.vercel.app/upload',{
+    await fetch('https://shopper-backend-i8xojg61r-naeems-projects-cb4a4a61.vercel.app/upload',{
         method: 'POST',
         headers:{
             Accept:'application/json',
@@ -42,7 +42,7 @@ const AddProduct = () => {
         {
             product.image = responseData.image_url;
             // console.log(product)
-            await fetch('https://shopper-backend-tan.vercel.app/addproduct',{
+            await fetch('https://shopper-backend-i8xojg61r-naeems-projects-cb4a4a61.vercel.app/addproduct',{
                 method: 'POST',
                 headers:{
                     Accept:'application/json',
