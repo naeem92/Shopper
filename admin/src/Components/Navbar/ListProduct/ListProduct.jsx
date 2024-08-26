@@ -8,7 +8,7 @@ const ListProduct = () => {
   const [allproducts,setAllProducts] = useState([]);
   // Fetch data from backend API
   const fetchInfo  = async () => {
-  await fetch('https://shopper-backend-tan.vercel.app/allproducts')
+  await fetch('https://shopper-backend-i8xojg61r-naeems-projects-cb4a4a61.vercel.app/allproducts')
   .then((res)=>res.json())
   .then((data)=>{setAllProducts(data)});
   }
@@ -18,7 +18,7 @@ const ListProduct = () => {
   },[])
   // Delete product from backend API
   const remove_product = async (id) => {
-    await fetch(`https://shopper-backend-tan.vercel.app/removeproduct`, {
+    await fetch(`https://shopper-backend-i8xojg61r-naeems-projects-cb4a4a61.vercel.app/removeproduct`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
