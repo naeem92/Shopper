@@ -10,7 +10,11 @@ const path = require("path");
 const cors = require("cors");
 
 app.use(express.json());
-app.use(cors());
+const cors = require('cors');
+app.use(cors({
+  origin: 'https://shopper-frontend-pi.vercel.app/', 
+}));
+
 
 // Connect to MongoDB
 mongoose
