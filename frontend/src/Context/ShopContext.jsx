@@ -16,14 +16,14 @@ const ShopContextProvider = (props) => {
 
     useEffect(() => {
         // Fetch all products
-        fetch('https://shopper-backend-tan.vercel.app/allproducts')
+        fetch('https://shopper-backend-i8xojg61r-naeems-projects-cb4a4a61.vercel.app/allproducts')
             .then(response => response.json())
             .then(data => setAll_product(data))
             .catch(error => console.error('Error fetching products:', error));
 
         // Fetch cart items if authenticated
         if (localStorage.getItem('auth-token')) {
-            fetch('https://shopper-backend-tan.vercel.app/getcart', {
+            fetch('https://shopper-backend-i8xojg61r-naeems-projects-cb4a4a61.vercel.app/getcart', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json', 
@@ -45,7 +45,7 @@ const ShopContextProvider = (props) => {
     const addToCart = (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
         if (localStorage.getItem('auth-token')) {
-            fetch('https://shopper-backend-tan.vercel.app/addtocart', {
+            fetch('https://shopper-backend-i8xojg61r-naeems-projects-cb4a4a61.vercel.app/addtocart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
@@ -63,7 +63,7 @@ const ShopContextProvider = (props) => {
     const removeFromCart = (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
         if (localStorage.getItem('auth-token')) {
-            fetch('https://shopper-backend-tan.vercel.app/removefromcart', {
+            fetch('https://shopper-backend-i8xojg61r-naeems-projects-cb4a4a61.vercel.app/removefromcart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
