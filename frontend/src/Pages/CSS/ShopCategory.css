@@ -1,0 +1,103 @@
+.shopcategory-banner{
+    display: block;
+    margin: 30px auto;
+    width: 80%;
+    margin-top: 120px;
+}
+.shopcategory-indexSort{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 85px;
+
+}
+.shopcategory-sort{
+    padding: 8px 20px;
+    border-radius: 40px;
+    border: 1px solid #888;
+    margin-right: 30px;
+}
+.shopcategory-indexSort p span{
+    font-weight: 700;
+    margin-left: 36px;
+}
+.shopcategory-products{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 60px;
+    margin-top: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.shopcategory-loadmore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+    width: 180px;
+    height: 50px;
+    border-radius: 75px;
+    background:#ededed;
+    color: #787878;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+@media (max-width:1280px) {
+    .shopcategory-banner{
+        margin: 20px auto;
+        width: 90%;
+        margin-top: 120px;
+    }
+    .shopcategory-indexSort{
+        width: 95%;
+        margin: auto;
+    }
+    .shopcategory-sort{
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    .shopcategory-indexSort p span {
+        margin-left: 14px;
+    }
+    div .shopcategory-sort{
+        margin: 0px;
+    }
+    .shopcategory-indexSort p{
+        font-size: 12px;
+    }
+    .shopcategory-products{
+        width: 95%;
+        margin: 20px auto;
+        row-gap: 40px;
+    }
+    div .shopcategory-products{
+        padding: 0px;
+    }
+    .shopcategory-products .item{
+        margin: auto;
+    }
+    .shopcategory-loadmore {
+        margin: 100px auto;
+        width: 131px;
+        height: 45px;
+        font-size: 12px;
+    }
+}
+@media (max-width:800px) {
+    .shopcategory-banner{
+        width: 95%;
+    }
+}
+@media (max-width:700px) {
+    .shopcategory-products{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (max-width:550px) {
+    .shopcategory-products{
+        grid-template-columns: 1fr 1fr;
+    }
+}
