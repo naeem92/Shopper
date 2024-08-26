@@ -19,7 +19,11 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => console.log("Connected to MongoDB"))
-  .catch((err) => console.error("Could not connect to MongoDB...", err));
+  .catch((err) => {
+    console.error("Could not connect to MongoDB...", err);
+    process.exit(1); // Exit if connection fails
+  });
+
 
 // Image Storage Engine
 const storage = multer.diskStorage({
