@@ -5,7 +5,7 @@ import Item from '../Item/Item'
 const NewCollections = () => {
   const [new_collection, setNew_Collection] = useState([])
   useEffect(() => {
-    fetch('http://localhost:4000/newcollections')
+    fetch('https://shopper-backend-tan.vercel.app/newcollections')
     .then((response)=>response.json())
     .then((data) => setNew_Collection(data));
   },[])
